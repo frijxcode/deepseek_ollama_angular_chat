@@ -6,6 +6,16 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 For a detailed guide on how to get ollama and deepseek R1 up and running on your local windows pc I suggest you watch the first 3 minutes and 38 seconds of this youtube video: https://youtu.be/ulEMJxTI2d8?feature=shared
 
+## Before Trying to run the chat app
+
+Remember to run npm install on the repo once you have cloned it to your local
+
+To start a local development server, run:
+
+```bash
+ng serve --open
+```
+
 ## Development server
 
 To start a local development server, run:
