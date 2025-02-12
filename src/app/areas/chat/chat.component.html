@@ -1,0 +1,114 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Deep Web Chat 1.0</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/" (click)="clearChats()">| Clear All Chats |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">| New Chat |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" (click)="unloadModel()">| Unload Model |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" (click)="getLocalModelsList()">| List Local Models
+            |</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" (click)="getLocalRunningModelsList()">| List Local
+            Running Models |</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <h2>Welcome to Deep Web Chat</h2>
+      <h6>Powered by Ollama & Deepseek</h6>
+    </div>
+    <div class="col-md-2 prev-chats d-flex flex-column">
+      <div>
+        <strong>Previous chats</strong>
+        <br />
+        <table>
+          <tr *ngFor="let chat of previousChats">
+            <td style="max-width: 100%;">
+              <button type="button" class="btn btn-link" (click)="loadPreviousChat(chat.id)">
+                ⇒ {{ getSubstring(chat.messages[0].content, 50) }}
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="mt-auto" *ngIf="working">
+        <img class="img-fluid loader-img" src="/loader.gif" />
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="form-floating mb-1 input-group input-text-model">
+        <input class="form-control input-text-model m-1" id="model" type="text" placeholder="model"
+          [(ngModel)]="deepseekLLM" />
+        <label for="model" class="orange-alert">
+          Model
+        </label>
+        <div class="m-1">
+          Max Tokens:
+          <input [(ngModel)]="maxTokens" type="number" />
+        </div>
+        <div class="m-1">
+          Temperature:
+          <input [(ngModel)]="temperature" type="number" />
+        </div>
+      </div>
+      <h5>Previous messages</h5>
+      <div #prevRespsArea class="resp-block">
+        <div *ngFor="let message of chatObject.messages">
+          <div *ngIf="message.role == 'user'">
+            <pre class="your-response">
+            <strong class="you-label">YOU:</strong> {{message.content}}
+            </pre>
+          </div>
+          <div *ngIf="message.role == 'assistant'">
+            <pre class="ai-response">
+              <strong class="ai-label">AI:</strong> {{message.content}}
+            </pre>
+          </div>
+        </div>
+        <pre *ngIf="working" class="ai-response">
+      <strong class="ai-label">AI:</strong> {{textareaContent}}
+    </pre>
+      </div>
+      <h5 class="orange-alert">User Input:</h5>
+      <div class="input-group">
+        <textarea [disabled]="working" [(ngModel)]="content" class="form-control user-text"></textarea>
+      </div>
+      <div class="float-end m-2">
+        <button [disabled]="working" class="btn btn-dark mt-1 m-1" (click)="sendQuestion()">Submit</button>
+        <button [disabled]="!working" class="btn btn-warning m-1 mt-1" (click)="abortCurrentRequest()">Abort</button>
+      </div>
+      <div *ngIf="!working && performance.eval_count>0" class="float-start">
+        <h6>Performance Results</h6>
+        <table>
+          <tr class="perf">
+            <td>Evaluations:</td>
+            <td class="orange-alert">{{performance.eval_count}}</td>
+            <td> | Eval Duration:</td>
+            <td class="orange-alert">{{performance.eval_duration}} </td>
+            <td> | Load Duration:</td>
+            <td class="orange-alert">{{performance.load_duration}} </td>
+            <td> | Total Duration:</td>
+            <td class="orange-alert">{{performance.total_duration}} </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

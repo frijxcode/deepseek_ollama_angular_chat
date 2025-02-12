@@ -1,0 +1,72 @@
+.input-text {
+  color: white;
+  height: 16rem;
+  background-color: lightslategrey;
+  font-size: medium;
+  font-family: sans-serif, Helvetica, Arial;
+}
+
+.input-text-model {
+  color: white;
+  background-color: rgb(51, 51, 51);
+  font-size: medium;
+  font-family: sans-serif, Helvetica, Arial;
+}
+
+.user-text {
+  color: black;
+  height: 5rem;
+  background-color: rgb(150, 150, 150);
+  font-size: medium;
+  font-family: sans-serif, Helvetica, Arial;
+}
+
+.prev-chats {
+  background-color: #d3e5d3;
+}
+
+.orange-alert {
+  color: orangered;
+}
+
+.your-response {
+  color: blue;
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.you-label {
+  color: orangered;
+  font-size: large;
+}
+
+.ai-response {
+  color: darkgreen;
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.ai-label {
+  color: purple;
+  font-size: large;
+}
+
+.perf {
+  font-weight: bold;
+}
+
+.resp-block {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #fff1e0;
+}
+
+.loader-img {
+  width: 100%;
+}
