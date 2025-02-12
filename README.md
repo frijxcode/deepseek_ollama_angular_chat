@@ -10,7 +10,11 @@ For a detailed guide on how to get ollama and deepseek R1 up and running on your
 
 Remember to run npm install on the repo once you have cloned it to your local
 
-To start a local development server, run:
+```bash
+npm install
+```
+
+## To start a local development server, run:
 
 ```bash
 ng serve --open
