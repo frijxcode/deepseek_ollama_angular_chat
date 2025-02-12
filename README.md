@@ -38,10 +38,21 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ## To Install Angular
 Make sure you have downloaded node first, I'm on windows so I downloaded and installed node for windows, once installed, open node.js command prompt (You Can search for it via the windows start bar)
-Then in the node command prompt type in npm install
+Then in the node command prompt type in the command below:
 
 ```bash
 npm install -g @angular/cli
+```
+
+For a specific version of angular you can type in the command below just replace [version] with the version of angular you want to install globally
+
+```bash
+npm install -g @angular/cli@[version]
+```
+
+example:
+```bash
+npm install -g @angular/cli@19.1.5
 ```
 
 ## Additional Resources
