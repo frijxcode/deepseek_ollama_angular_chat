@@ -1,6 +1,7 @@
 # DeepseekWebchat
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+A web application that intergrates into a local instance of Ollama running deepseek-r1 any model version - maintains chat history and conversations had with the deepseek specified model running with in ollama
 
 ## Ollama and Deepseek setup
 
