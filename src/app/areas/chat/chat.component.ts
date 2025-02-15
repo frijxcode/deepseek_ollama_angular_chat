@@ -8,6 +8,7 @@ import { DeepseekPerformanceObject } from '../../shared/models/deepseek_performa
 import { OllamaUnload } from '../../shared/models/ollama_unload';
 import { OllamaUnloadResponse } from '../../shared/models/ollama_unload_response';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'deep-chat',
@@ -35,7 +36,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
     previousChatKey: string = "DeepPrevChats1";
     performance: DeepseekPerformanceObject = {} as DeepseekPerformanceObject;
 
-    constructor(private _api: ApiService, private _localStorage: LocalStorageService, private router: Router) { }
+    constructor(private _api: ApiService, private _localStorage: LocalStorageService, private router: Router, private route: ActivatedRoute) { }
 
     ngAfterViewInit(): void {
 
@@ -58,6 +59,13 @@ export class ChatComponent implements OnInit, AfterViewInit {
             // loads up previous chats from browser storage if there are any
             this.previousChats = this._localStorage.GetLocalStorageObjectByKey<DeepseekPassObject[]>(this.previousChatKey);
         }
+        this.route.queryParams.subscribe(params => {
+            if (params['theme']) { // Check if the parameter exists
+                this.theme = params['theme']; // Assign the parameter value
+            } else {
+                this.theme = '_default'; // Handle the case when the parameter does not exist
+            }
+        });
     }
 
     onSelectionChange(value: string) {
@@ -188,7 +196,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
         this._api.abortRequest();
         this.working = false;
         setTimeout(() => {
-            this.router.navigate(['/']).then(() => {
+            this.router.navigate(['/'], { queryParams: { theme: this.theme } }).then(() => {
                 window.location.reload();
             });
         }, 250);
