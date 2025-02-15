@@ -1,72 +1,1263 @@
-.input-text {
-  color: white;
-  height: 16rem;
-  background-color: lightslategrey;
-  font-size: medium;
-  font-family: sans-serif, Helvetica, Arial;
+.base_default {
+  height: 100vh;
+  background-color: #f0f4f8;
+  /* Soft light gray */
 }
 
-.input-text-model {
-  color: white;
-  background-color: rgb(51, 51, 51);
-  font-size: medium;
-  font-family: sans-serif, Helvetica, Arial;
+.headers_default{
+  color:#2c3e50 !important;
 }
 
-.user-text {
-  color: black;
+.input-text-model_default {
+  color: #f0f0f0;
+  /* Light gray for text */
+  background-color: #2c3e50;
+  /* Dark blue-gray */
+  font-size: medium;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.user-text_default {
+  color: #2c3e50;
+  /* Dark blue-gray for text */
   height: 5rem;
-  background-color: rgb(150, 150, 150);
+  font-weight: 600;
+  background-color: #bdc3c7;
+  /* Light gray */
   font-size: medium;
-  font-family: sans-serif, Helvetica, Arial;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.prev-chats {
-  background-color: #d3e5d3;
+.prev-chats_default {
+  background-color: #2c3e50;
+  /* Light green */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #fff900; /* Modern purple */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #00ffa2; /* Darker shade of purple for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: white !important;
+  }
 }
 
-.orange-alert {
-  color: orangered;
+.orange-alert_default {
+  color: #e67e22;
+  /* Modern orange */
 }
 
-.your-response {
-  color: blue;
+.your-response_default {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #2980b9;
+  /* Bright blue */
   font-weight: 600;
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
-.you-label {
-  color: orangered;
+.you-label_default {
+  color: #e67e22;
+  /* Modern orange */
   font-size: large;
 }
 
-.ai-response {
-  color: darkgreen;
+.ai-response_default {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #27ae60;
+  /* Modern green */
   font-weight: 600;
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
-.ai-label {
-  color: purple;
+.ai-label_default {
+  color: #8e44ad;
+  /* Modern purple */
   font-size: large;
 }
 
-.perf {
+.perf_default {
   font-weight: bold;
 }
 
-.resp-block {
+.resp-block_default {
   min-height: 100px;
   max-height: 600px;
   overflow-y: auto;
   width: 100%;
-  background-color: #fff1e0;
+  background-color: #fff3c2;
+  /* Soft yellow */
 }
 
-.loader-img {
+.loader-img_default {
   width: 100%;
+}
+
+.btn-dark_default {
+  background-color: #ffd736; /* Darker gray */
+  color: #181818; /* Bright green text */
+}
+
+.btn-warning_default {
+  background-color: #fff3c2; /* Cyan */
+  color: #1f1f1f; /* White text */
+}
+
+/*
+Alt Style ----------> MATRIX
+*/
+
+.base_matrix {
+  height: 100vh;
+  background-color: #000; /* Black background */
+}
+
+.headers_matrix{
+  color:#00ff00 !important;
+}
+
+.input-text-model_matrix {
+  color: #00ff00; /* Bright green for text */
+  background-color: #1c1c1c; /* Dark gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy feel */
+}
+
+.user-text_matrix {
+  color: #00ff00; /* Bright green for text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #333; /* Dark gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+}
+
+.prev-chats_matrix {
+  background-color: #1c1c1c; /* Dark gray */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #00ff00; /* Bright green */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #00ffa2; /* Lighter green for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: #00ff00; /* Bright green */
+  }
+}
+
+.orange-alert_matrix {
+  color: #ff4500; /* Bright orange */
+}
+
+.your-response_matrix {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #00ff00; /* Bright green */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.you-label_matrix {
+  color: #00ff00; /* Bright green */
+  font-size: large;
+}
+
+.ai-response_matrix {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #00ff00; /* Bright green */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.ai-label_matrix {
+  color: #00ff00; /* Bright green */
+  font-size: large;
+}
+
+.perf_matrix {
+  font-weight: bold;
+  color: #00ff00; /* Bright green */
+}
+
+.resp-block_matrix {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #1c1c1c; /* Dark gray */
+}
+
+.loader-img_matrix {
+  width: 100%;
+}
+
+/* Bootstrap Overrides for Matrix Theme */
+.btn-dark_matrix {
+  background-color: #1c1c1c; /* Darker gray */
+  color: #00ff00; /* Bright green text */
+}
+
+.btn-warning_matrix {
+  background-color: #00bcd4; /* Cyan */
+  color: #fff; /* White text */
+}
+
+/*
+Alt Style ----------> half life
+*/
+
+.base_halflife {
+  height: 100vh;
+  background-color: #1a1a1a; /* Dark background for an urban feel */
+}
+
+.headers_halflife {
+  color: #ffcc00 !important; /* Bright gold for headers */
+  font-family: 'Impact', sans-serif; /* Bold font for impact */
+}
+
+.input-text-model_halflife {
+  color: #ffffff; /* White text for contrast */
+  background-color: #333; /* Dark gray */
+  font-size: medium;
+  font-family: 'Arial Black', Gadget, sans-serif; /* Bold font for a strong look */
+}
+
+.user-text_halflife {
+  color: #ffffff; /* White text for contrast */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #444; /* Slightly lighter gray */
+  font-size: medium;
+  font-family: 'Arial Black', Gadget, sans-serif; /* Bold font */
+}
+
+.prev-chats_halflife {
+  background-color: #222; /* Darker gray for chat background */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #ffcc00; /* Bright gold */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #ff9900; /* Lighter gold for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: #ffcc00; /* Bright gold */
+    font-family: 'Impact', sans-serif; /* Bold font for headers */
+  }
+}
+
+.orange-alert_halflife {
+  color: #ff4500; /* Bright orange */
+}
+
+.your-response_halflife {
+  font-family: 'Arial Black', Gadget, sans-serif; /* Bold font */
+  color: #ffeeab; /* Bright gold */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.you-label_halflife {
+  color: #ffffff; /* Bright gold */
+  font-size: large;
+}
+
+.ai-response_halflife {
+  font-family: 'Arial Black', Gadget, sans-serif; /* Bold font */
+  color: #ffcc00; /* Bright gold */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.ai-label_halflife {
+  color: #ff8d41; /* Bright gold */
+  font-size: large;
+}
+
+.perf_halflife {
+  font-weight: bold;
+  color: #ffcc00; /* Bright gold */
+}
+
+.resp-block_halflife {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #333; /* Dark gray */
+}
+
+.loader-img_halflife {
+  width: 100%;
+}
+
+.btn-dark_halflife {
+  background-color: #ffcc00; /* Darker gray */
+  color: #181818; /* Bright green text */
+}
+
+.btn-warning_halflife {
+  background-color: #ffaa00; /* Cyan */
+  color: #1f1f1f; /* White text */
+}
+
+/*
+Alt Style ----------> GRAFFITI
+*/
+
+.base_graf1 {
+  height: 100vh;
+  background-color: #1a1a1a; /* Dark background for an urban feel */
+}
+
+.headers_graf1 {
+  color: #ff4081 !important; /* Bright pink for headers */
+  font-family: 'Brush Script MT', cursive; /* Graffiti-style font */
+}
+
+.input-text-model_graf1 {
+  color: #ffffff; /* White text for contrast */
+  background-color: #333; /* Dark gray */
+  font-size: medium;
+  font-family: 'Comic Sans MS', cursive; /* Fun, casual font */
+}
+
+.user-text_graf1 {
+  color: #ffffff; /* White text for contrast */
+  height: 5rem;
+  background-color: #444; /* Slightly lighter gray */
+  font-size: medium;
+  font-family: 'Comic Sans MS', cursive; /* Fun, casual font */
+}
+
+.prev-chats_graf1 {
+  background-color: #222; /* Darker gray for chat background */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #ff4081; /* Bright pink */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #ff80ab; /* Lighter pink for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: #ff4081; /* Bright pink */
+    font-family: 'Brush Script MT', cursive; /* Graffiti-style font */
+  }
+}
+
+.orange-alert_graf1 {
+  color: #ff5722; /* Bright orange */
+}
+
+.your-response_graf1 {
+  font-family: 'Comic Sans MS', cursive; /* Fun, casual font */
+  color: #ffaedf; /* Bright pink */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.you-label_graf1 {
+  color: #e6ff40; /* Bright pink */
+  font-size: large;
+}
+
+.ai-response_graf1 {
+  font-family: 'Comic Sans MS', cursive; /* Fun, casual font */
+  color: #ff4081; /* Bright pink */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.ai-label_graf1 {
+  color: #ef40ff; /* Bright pink */
+  font-size: large;
+}
+
+.perf_graf1 {
+  font-weight: bold;
+  color: #ff4081; /* Bright pink */
+}
+
+.resp-block_graf1 {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #333; /* Dark gray */
+}
+
+.loader-img_graf1 {
+  width: 100%;
+}
+
+.btn-dark_graf1 {
+  background-color: #b300ff; /* Darker gray */
+  color: #ffffff; /* Bright green text */
+}
+
+.btn-warning_graf1 {
+  background-color: #95ff00; /* Cyan */
+  color: #000000; /* White text */
+}
+
+
+/*
+=------>  RETRO
+*/
+
+.base_retro {
+  height: 100vh;
+  background-color: #f0e68c; /* Light yellow */
+}
+
+.headers_retro {
+  color: #ff6347; /* Tomato red */
+  font-family: 'Courier New', Courier, monospace; /* Retro typewriter font */
+}
+
+.input-text-model_retro {
+  color: #000; /* Black text */
+  background-color: #fff; /* White background */
+  font-size: medium;
+  font-family: 'Lucida Console', Monaco, monospace; /* Retro console font */
+}
+
+.user-text_retro {
+  color: #000; /* Black text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #e0e0e0; /* Light gray */
+  font-size: medium;
+  font-family: 'Lucida Console', Monaco, monospace; /* Retro console font */
+}
+
+.prev-chats_retro {
+  background-color: #d3d3d3; /* Light gray */
+  h6 {
+    margin-top: 5px;
+  }
+}
+
+.orange-alert_retro {
+  color: #ff4500; /* Bright orange */
+}
+
+.your-response_retro {
+  font-family: 'Courier New', Courier, monospace; /* Retro typewriter font */
+  color: #000; /* Black text */
+  font-weight: 600;
+}
+
+.you-label_retro {
+  color: #ff6347; /* Tomato red */
+}
+
+.ai-response_retro {
+  font-family: 'Courier New', Courier, monospace; /* Retro typewriter font */
+  color: #000; /* Black text */
+}
+
+.ai-label_retro {
+  color: #ff6347; /* Tomato red */
+}
+
+.perf_retro {
+  font-weight: bold;
+  color: #ff6347; /* Tomato red */
+}
+
+.resp-block_retro {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #f5f5f5; /* Very light gray */
+}
+
+.loader-img_retro {
+  width: 100%;
+}
+
+/* Bootstrap Overrides */
+.btn-dark_retro {
+  background-color: #333; /* Dark gray */
+  color: #fff; /* White text */
+}
+
+.btn-warning_retro {
+  background-color: #ff6347; /* Tomato red */
+  color: #fff; /* White text */
+}
+
+
+/*
+=--------> NEON
+*/
+
+.base_neon {
+  height: 100vh;
+  background-color: #0d0d0d; /* Dark background */
+}
+
+.headers_neon {
+  color: #39ff14; /* Neon green */
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+.input-text-model_neon {
+  color: #ffffff; /* White text */
+  background-color: #1a1a1a; /* Dark gray */
+  font-size: medium;
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+.user-text_neon {
+  color: #ffffff; /* White text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #222; /* Darker gray */
+}
+
+.prev-chats_neon {
+  background-color: #333; /* Dark gray */
+
+  h6 {
+    margin-top: 5px;
+  }
+}
+
+.orange-alert_neon {
+  color: #ff007f; /* Neon pink */
+}
+
+.your-response_neon {
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+  color: #39ff14; /* Neon green */
+  font-weight: 600;
+}
+
+.you-label_neon {
+  color: #c756ff; /* Neon green */
+}
+
+.ai-response_neon {
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+  color: #39ff14; /* Neon green */
+}
+
+.ai-label_neon {
+  color: #38b3ff; /* Neon green */
+}
+
+.perf_neon {
+  font-weight: bold;
+  color: #39ff14; /* Neon green */
+}
+
+.resp-block_neon {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #1a1a1a; /* Dark gray */
+}
+
+.loader-img_neon {
+  width: 100%;
+}
+
+.btn-dark_neon {
+  background-color: #e100ff; /* Dark gray */
+  color: #ffffff; /* White text */
+}
+
+.btn-warning_neon {
+  background-color: #c2ff35; /* Tomato red */
+  color: #000000; /* White text */
+}
+
+/*
+=------> TECH
+*/
+
+.base_tech {
+  height: 100vh;
+  background-color: #0e0e0e; /* Dark background */
+}
+
+.headers_tech {
+  color: #00bcd4; /* Cyan */
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+}
+
+.input-text-model_tech {
+  color: #ffffff; /* White text */
+  background-color: #1c1c1c; /* Dark gray */
+  font-size: medium;
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+}
+
+.user-text_tech {
+  color: #ffffff; /* White text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #333; /* Dark gray */
+}
+
+.prev-chats_tech {
+  background-color: #222; /* Darker gray */
+
+   /* Override Bootstrap button link color */
+   .btn-link {
+    color: #00e5ff; /* Modern purple */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #00ffa2; /* Darker shade of purple for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: white;
+  }
+}
+
+.orange-alert_tech {
+  color: #ff5722; /* Deep orange */
+}
+
+.your-response_tech {
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  color: #00bcd4; /* Cyan */
+  font-weight: 600;
+}
+
+.you-label_tech {
+  color: #008dd4; /* Cyan */
+}
+
+.ai-response_tech {
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  color: #00d4a2; /* Cyan */
+}
+
+.ai-label_tech {
+  color: #94d400; /* Cyan */
+}
+
+.perf_tech {
+  font-weight: bold;
+  color: #00bcd4; /* Cyan */
+}
+
+.resp-block_tech {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #0c1516; /* Dark gray */
+}
+
+.loader-img_tech {
+  width: 100%;
+}
+
+.btn-dark_tech {
+  background-color: #00bcd4; /* Dark gray */
+  color: #000000; /* White text */
+}
+
+.btn-warning_tech {
+  background-color: #68e6f7; /* Tomato red */
+  color: #000000; /* White text */
+}
+
+/*
+Alt Style ----------> OCEAN BREEZE
+*/
+
+.base_ocean {
+  height: 100vh;
+  background-color: #e0f7fa; /* Light cyan */
+}
+
+.headers_ocean {
+  color: #00796b; /* Teal */
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+.input-text-model_ocean {
+  color: #004d40; /* Dark teal */
+  background-color: #b2dfdb; /* Light teal */
+  font-size: medium;
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+.user-text_ocean {
+  color: #004d40; /* Dark teal */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #a7ffeb; /* Lighter teal */
+  font-size: medium;
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+}
+
+.prev-chats_ocean {
+  background-color: #b2dfdb; /* Light teal */
+  h6 {
+    margin-top: 5px;
+  }
+}
+
+.orange-alert_ocean {
+  color: #ff7043; /* Coral */
+}
+
+.your-response_ocean {
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+  color: #00796b; /* Teal */
+  font-weight: 600;
+}
+
+.you-label_ocean {
+  color: #00796b; /* Teal */
+}
+
+.ai-response_ocean {
+  font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+  color: #00796b; /* Teal */
+}
+
+.ai-label_ocean {
+  color: #00796b; /* Teal */
+}
+
+.perf_ocean {
+  font-weight: bold;
+  color: #00796b; /* Teal */
+}
+
+.resp-block_ocean {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #e0f7fa; /* Light cyan */
+}
+
+.loader-img_ocean {
+  width: 100%;
+}
+
+/* Bootstrap Overrides for Ocean Breeze Theme */
+.btn-dark_ocean {
+  background-color: #84ffea; /* Dark teal */
+  color: #000000; /* White text */
+}
+
+.btn-warning_ocean {
+  background-color: #3d6e74; /* Coral */
+  color: #fff; /* White text */
+}
+
+/*
+Alt Style ----------> DOOM
+*/
+
+.base_doom {
+  height: 100vh;
+  background-color: #1a1a1a; /* Very dark gray */
+}
+
+.headers_doom {
+  color: #ff0000; /* Bright red for headers */
+  font-family: 'Impact', sans-serif; /* Bold, impactful font */
+}
+
+.input-text-model_doom {
+  color: #ffffff; /* White text */
+  background-color: #333333; /* Dark gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for a gritty feel */
+}
+
+.user-text_doom {
+  color: #ffffff; /* White text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #444444; /* Slightly lighter gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+}
+
+.prev-chats_doom {
+  background-color: #222222; /* Darker gray */
+
+   /* Override Bootstrap button link color */
+   .btn-link {
+    color: #ff6a00; /* Modern purple */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #ff0000; /* Darker shade of purple for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: white;
+  }
+}
+
+.orange-alert_doom {
+  color: #ff4500; /* Bright orange */
+}
+
+.your-response_doom {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #fbce52; /* Bright red */
+  font-weight: 600;
+}
+
+.you-label_doom {
+  color: #ff9d00; /* Bright red */
+}
+
+.ai-response_doom {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #ff0000; /* Bright red */
+}
+
+.ai-label_doom {
+  color: #ff5d5d; /* Bright red */
+}
+
+.perf_doom {
+  font-weight: bold;
+  color: #ff0000; /* Bright red */
+}
+
+.resp-block_doom {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #333333; /* Dark gray */
+}
+
+.loader-img_doom {
+  width: 100%;
+}
+
+/* Bootstrap Overrides for Doom Theme */
+.btn-dark_doom {
+  background-color: #444444; /* Dark gray */
+  color: #fff; /* White text */
+}
+
+.btn-warning_doom {
+  background-color: #ff4500; /* Bright orange */
+  color: #fff; /* White text */
+}
+
+/*
+Alt Style ----------> FUTURE
+*/
+
+.base_future {
+  height: 100vh;
+  background-color: #121212; /* Very dark gray for a futuristic look */
+}
+
+.headers_future {
+  color: #00ccff !important; /* Bright sky blue for headers */
+}
+
+.input-text-model_future {
+  color: #ffffff; /* White for text */
+  background-color: #1e1e1e; /* Dark gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy feel */
+}
+
+.user-text_future {
+  color: #ffffff; /* White for text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #2a2a2a; /* Slightly lighter dark gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+}
+
+.prev-chats_future {
+  background-color: #1e1e1e; /* Dark gray */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #00ccff; /* Bright sky blue */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #66d9ef; /* Lighter blue for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: #00ccff; /* Bright sky blue */
+  }
+}
+
+.orange-alert_future {
+  color: #ff9800; /* Bright orange */
+}
+
+.your-response_future {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #ffffff; /* White for text */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.you-label_future {
+  color: #00ccff; /* Bright sky blue */
+  font-size: large;
+}
+
+.ai-response_future {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #ffffff; /* White for text */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.ai-label_future {
+  color: #00ccff; /* Bright sky blue */
+  font-size: large;
+}
+
+.perf_future {
+  font-weight: bold;
+  color: #00ccff; /* Bright sky blue */
+}
+
+.resp-block_future {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #1e1e1e; /* Dark gray */
+}
+
+.loader-img_future {
+  width: 100%;
+}
+
+/* Bootstrap Overrides for Future Theme */
+.btn-dark_future {
+  background-color: #1e1e1e; /* Dark gray */
+  color: #00ccff; /* Bright sky blue text */
+}
+
+.btn-warning_future {
+  background-color: #ff9800; /* Bright orange */
+  color: #fff; /* White text */
+}
+
+/*
+Alt Style ----------> BLACK_AND_WHITE
+*/
+
+.base_black_and_white {
+  height: 100vh;
+  background-color: #000; /* Black background */
+}
+
+.headers_black_and_white {
+  color: #fff !important; /* White for headers */
+}
+
+.input-text-model_black_and_white {
+  color: #000; /* Black for text */
+  background-color: #fff; /* White background */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy feel */
+}
+
+.user-text_black_and_white {
+  color: #000; /* Black for text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #f0f0f0; /* Light gray */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+}
+
+.prev-chats_black_and_white {
+  background-color: #f0f0f0; /* Light gray */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #000; /* Black */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #555; /* Dark gray for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: #000; /* Black */
+  }
+}
+
+.orange-alert_black_and_white {
+  color: #acacac; /* Bright orange for alerts */
+}
+
+.your-response_black_and_white {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #000; /* Black for text */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.you-label_black_and_white {
+  color: #000; /* Black */
+  font-size: large;
+}
+
+.ai-response_black_and_white {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #000; /* Black for text */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.ai-label_black_and_white {
+  color: #000; /* Black */
+  font-size: large;
+}
+
+.perf_black_and_white {
+  font-weight: bold;
+  color: #ffffff; /* Black */
+}
+
+.resp-block_black_and_white {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #f0f0f0; /* Light gray */
+}
+
+.loader-img_black_and_white {
+  width: 100%;
+}
+
+/* Bootstrap Overrides for Black and White Theme */
+.btn-dark_black_and_white {
+  background-color: #333; /* Dark gray */
+  color: #fff; /* White text */
+}
+
+.btn-warning_black_and_white {
+  background-color: #616161; /* Bright orange */
+  color: #fff; /* White text */
+}
+
+/*
+Alt Style ----------> RAINBOW
+*/
+
+.base_rainbow {
+  height: 100vh;
+  background-color: #ffffff; /* White background for a bright look */
+}
+
+.headers_rainbow {
+  color: #ff5733 !important; /* Red for headers */
+}
+
+.input-text-model_rainbow {
+  color: #000; /* Black for text */
+  background-color: #ffeb3b; /* Bright yellow background */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy feel */
+}
+
+.user-text_rainbow {
+  color: #000; /* Black for text */
+  height: 5rem;
+  font-weight: 600;
+  background-color: #4caf50; /* Green background */
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+}
+
+.prev-chats_rainbow {
+  background-color: #2196f3; /* Blue background */
+
+  /* Override Bootstrap button link color */
+  .btn-link {
+    color: #ff27f1; /* Orange */
+  }
+
+  /* Optional: Change hover state for better UX */
+  .btn-link:hover {
+    color: #70ffcd; /* Lighter orange for hover effect */
+  }
+
+  h6 {
+    margin-top: 5px;
+    color: #ff0059 !important; /* Orange */
+  }
+}
+
+.orange-alert_rainbow {
+  color: #ff9800; /* Bright orange for alerts */
+}
+
+.your-response_rainbow {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #000; /* Black for text */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.you-label_rainbow {
+  color: #ff5733; /* Red */
+  font-size: large;
+}
+
+.ai-response_rainbow {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  color: #000; /* Black for text */
+  font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: medium !important;
+  margin: 0 !important;
+  padding-left: 5px;
+}
+
+.ai-label_rainbow {
+  color: #4caf50; /* Green */
+  font-size: large;
+}
+
+.perf_rainbow {
+  font-weight: bold;
+  color: #2196f3; /* Blue */
+}
+
+.resp-block_rainbow {
+  min-height: 100px;
+  max-height: 600px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #ffeb3b; /* Bright yellow */
+}
+
+.loader-img_rainbow {
+  width: 100%;
+}
+
+/* Bootstrap Overrides for Rainbow Theme */
+.btn-dark_rainbow {
+  background-color: #673ab7; /* Purple */
+  color: #fff; /* White text */
+}
+
+.btn-warning_rainbow {
+  background-color: #0adaff; /* Orange */
+  color: #000000; /* White text */
 }

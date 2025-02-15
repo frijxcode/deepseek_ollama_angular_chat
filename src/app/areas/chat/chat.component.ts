@@ -18,6 +18,7 @@ import { Router } from '@angular/router';
 export class ChatComponent implements OnInit, AfterViewInit {
     // Chat box area - needed for auto scroll
     @ViewChild('prevRespsArea') respsArea!: ElementRef<HTMLTextAreaElement>;
+    theme:string="_default";
     // To handle loaders
     working: boolean = false;
     // SEPERATE props for mapping to ollama objects - Could use instances of models directly - DONT AS ITs EASIER TO GO THIS ROUTE FOR YOUTUBE VIDEO EXPLANATIONS.
@@ -58,6 +59,11 @@ export class ChatComponent implements OnInit, AfterViewInit {
             this.previousChats = this._localStorage.GetLocalStorageObjectByKey<DeepseekPassObject[]>(this.previousChatKey);
         }
     }
+
+    onSelectionChange(value: string) {
+        this.theme = value;
+        console.log('Selected option:', this.theme);
+      }
 
     unloadModel(): void {
         let unload: OllamaUnload = {

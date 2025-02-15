@@ -1,3 +1,4 @@
+<div [ngClass]="'base' + theme">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">Deep Web Chat 1.0</a>
@@ -8,36 +9,53 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/" (click)="clearChats()">| Clear All Chats |</a>
+          <a class="nav-link" aria-current="page" href="/" (click)="clearChats()">| Clear All Chats |</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">| New Chat |</a>
+          <a class="nav-link" aria-current="page" href="/">| New Chat |</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="unloadModel()">| Unload Model |</a>
+          <a class="nav-link" aria-current="page" href="#" (click)="unloadModel()">| Unload Model |</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="getLocalModelsList()">| List Local Models
+          <a class="nav-link" aria-current="page" href="#" (click)="getLocalModelsList()">| List Local Models
             |</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="getLocalRunningModelsList()">| List Local
+          <a class="nav-link" aria-current="page" href="#" (click)="getLocalRunningModelsList()">| List Local
             Running Models |</a>
+        </li>
+        <li class="nav-item mt-2">
+          <select id="options"  [(ngModel)]="theme" (change)="onSelectionChange(theme)">
+            <option value="" disabled>Style selection</option>
+              <option value="_default">Default</option>
+              <option value="_ocean">Ocean Breeze</option>
+              <option value="_matrix">Matrix</option>
+              <option value="_halflife">Half Life</option>
+              <option value="_doom">Doom</option>
+              <option value="_retro">Retro</option>
+              <option value="_neon">Neon</option>
+              <option value="_graf1">Grafitti</option>
+              <option value="_tech">Technology</option>
+              <option value="_future">Future</option>
+              <option value="_black_and_white">Black & White</option>
+              <option value="_rainbow">Rainbow</option>
+          </select>
         </li>
       </ul>
     </div>
+   
   </div>
 </nav>
 <div class="container">
   <div class="row">
-    <div class="col-md-12" align="center">
+    <div class="col-md-12" align="center" [ngClass]="'headers' + theme">
       <h2>Welcome to Deep Web Chat</h2>
       <h6>Powered by Ollama & Deepseek</h6>
     </div>
-    <div class="col-md-2 prev-chats d-flex flex-column">
+    <div [ngClass]="'prev-chats' + theme" class="col-md-2 d-flex flex-column">
       <div>
-        <strong>Previous chats</strong>
-        <br />
+        <h6 [ngClass]="'headers' + theme">Previous chats</h6>
         <table>
           <tr *ngFor="let chat of previousChats">
             <td style="max-width: 100%;">
@@ -53,62 +71,64 @@
       </div>
     </div>
     <div class="col-md-10">
-      <div class="form-floating mb-1 input-group input-text-model">
-        <input class="form-control input-text-model m-1" id="model" type="text" placeholder="model"
+      <div class="form-floating mb-1 input-group" [ngClass]="'input-text-model' + theme">
+        <input [ngClass]="'input-text-model' + theme" class="form-control m-1" id="model" type="text" placeholder="model"
           [(ngModel)]="deepseekLLM" />
-        <label for="model" class="orange-alert">
+        <label for="model" [ngClass]="'orange-alert' + theme">
           Model
         </label>
-        <div class="m-1">
+        <div class="m-3">
           Max Tokens:
           <input [(ngModel)]="maxTokens" type="number" />
         </div>
-        <div class="m-1">
+        <div class="m-3">
           Temperature:
           <input [(ngModel)]="temperature" type="number" />
         </div>
       </div>
-      <h5>Previous messages</h5>
-      <div #prevRespsArea class="resp-block">
+      <h5 [ngClass]="'headers' + theme">Previous messages</h5>
+      <div #prevRespsArea [ngClass]="'resp-block' + theme">
         <div *ngFor="let message of chatObject.messages">
           <div *ngIf="message.role == 'user'">
-            <pre class="your-response">
-            <strong class="you-label">YOU:</strong> {{message.content}}
+            <pre [ngClass]="'your-response' + theme">
+            <strong [ngClass]="'you-label' + theme">YOU:</strong> {{message.content}}
             </pre>
           </div>
           <div *ngIf="message.role == 'assistant'">
-            <pre class="ai-response">
-              <strong class="ai-label">AI:</strong> {{message.content}}
+            <pre [ngClass]="'ai-response' + theme">
+              <strong [ngClass]="'ai-label' + theme">AI:</strong> {{message.content}}
             </pre>
           </div>
         </div>
-        <pre *ngIf="working" class="ai-response">
-      <strong class="ai-label">AI:</strong> {{textareaContent}}
+        <!--Used for current conversation, switches out once resp has completed - done so we don't constantly update local storage as conversation is streamed-->
+        <pre *ngIf="working" [ngClass]="'ai-response' + theme">
+      <strong [ngClass]="'ai-label' + theme">AI:</strong> {{textareaContent}}
     </pre>
       </div>
-      <h5 class="orange-alert">User Input:</h5>
+      <h5 [ngClass]="'orange-alert' + theme">User Input:</h5>
       <div class="input-group">
-        <textarea [disabled]="working" [(ngModel)]="content" class="form-control user-text"></textarea>
+        <textarea [disabled]="working" [(ngModel)]="content" class="form-control" [ngClass]="'user-text' + theme"></textarea>
       </div>
       <div class="float-end m-2">
-        <button [disabled]="working" class="btn btn-dark mt-1 m-1" (click)="sendQuestion()">Submit</button>
-        <button [disabled]="!working" class="btn btn-warning m-1 mt-1" (click)="abortCurrentRequest()">Abort</button>
+        <button [disabled]="working" class="btn mt-1 m-1" [ngClass]="'btn-dark' + theme" (click)="sendQuestion()">Submit</button>
+        <button [disabled]="!working" class="btn m-1 mt-1" [ngClass]="'btn-warning' + theme" (click)="abortCurrentRequest()">Abort</button>
       </div>
       <div *ngIf="!working && performance.eval_count>0" class="float-start">
-        <h6>Performance Results</h6>
+        <h6 [ngClass]="'headers' + theme">Performance Results</h6>
         <table>
-          <tr class="perf">
+          <tr  [ngClass]="'perf' + theme">
             <td>Evaluations:</td>
-            <td class="orange-alert">{{performance.eval_count}}</td>
+            <td [ngClass]="'orange-alert' + theme">{{performance.eval_count}}</td>
             <td> | Eval Duration:</td>
-            <td class="orange-alert">{{performance.eval_duration}} </td>
+            <td [ngClass]="'orange-alert' + theme">{{performance.eval_duration}} </td>
             <td> | Load Duration:</td>
-            <td class="orange-alert">{{performance.load_duration}} </td>
+            <td [ngClass]="'orange-alert' + theme">{{performance.load_duration}} </td>
             <td> | Total Duration:</td>
-            <td class="orange-alert">{{performance.total_duration}} </td>
+            <td [ngClass]="'orange-alert' + theme">{{performance.total_duration}} </td>
           </tr>
         </table>
       </div>
     </div>
   </div>
+</div>
 </div>
