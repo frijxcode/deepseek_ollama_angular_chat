@@ -505,6 +505,11 @@ Alt Style ----------> GRAFFITI
   font-family: 'Courier New', Courier, monospace; /* Retro typewriter font */
   color: #000; /* Black text */
   font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
 .you-label_retro {
@@ -514,6 +519,11 @@ Alt Style ----------> GRAFFITI
 .ai-response_retro {
   font-family: 'Courier New', Courier, monospace; /* Retro typewriter font */
   color: #000; /* Black text */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 !important;
+  padding-left: 5px;
 }
 
 .ai-label_retro {
@@ -593,6 +603,11 @@ Alt Style ----------> GRAFFITI
   font-family: 'Arial', sans-serif; /* Clean sans-serif font */
   color: #39ff14; /* Neon green */
   font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
 .you-label_neon {
@@ -602,6 +617,11 @@ Alt Style ----------> GRAFFITI
 .ai-response_neon {
   font-family: 'Arial', sans-serif; /* Clean sans-serif font */
   color: #39ff14; /* Neon green */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 !important;
+  padding-left: 5px;
 }
 
 .ai-label_neon {
@@ -690,6 +710,11 @@ Alt Style ----------> GRAFFITI
   font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
   color: #00bcd4; /* Cyan */
   font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
 .you-label_tech {
@@ -699,6 +724,11 @@ Alt Style ----------> GRAFFITI
 .ai-response_tech {
   font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
   color: #00d4a2; /* Cyan */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 !important;
+  padding-left: 5px;
 }
 
 .ai-label_tech {
@@ -777,6 +807,11 @@ Alt Style ----------> OCEAN BREEZE
   font-family: 'Arial', sans-serif; /* Clean sans-serif font */
   color: #00796b; /* Teal */
   font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
 .you-label_ocean {
@@ -786,6 +821,11 @@ Alt Style ----------> OCEAN BREEZE
 .ai-response_ocean {
   font-family: 'Arial', sans-serif; /* Clean sans-serif font */
   color: #00796b; /* Teal */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 !important;
+  padding-left: 5px;
 }
 
 .ai-label_ocean {
@@ -877,6 +917,11 @@ Alt Style ----------> DOOM
   font-family: 'Courier New', Courier, monospace; /* Monospace font */
   color: #fbce52; /* Bright red */
   font-weight: 600;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 0 0 0 !important;
+  padding-left: 5px;
 }
 
 .you-label_doom {
@@ -886,6 +931,11 @@ Alt Style ----------> DOOM
 .ai-response_doom {
   font-family: 'Courier New', Courier, monospace; /* Monospace font */
   color: #ff0000; /* Bright red */
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0 !important;
+  padding-left: 5px;
 }
 
 .ai-label_doom {
