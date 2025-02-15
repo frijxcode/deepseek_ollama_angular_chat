@@ -2,12 +2,32 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
 
+A web application that intergrates with a local instance of Ollama running deepseek-r1 any model version - maintains chat history and conversations had with the deepseek specified model running with in ollama
+
+## Ollama and Deepseek setup
+
+For a detailed guide on how to get ollama and deepseek R1 up and running on your local windows pc I suggest you watch the first 3 minutes and 38 seconds of this youtube video: https://youtu.be/ulEMJxTI2d8?feature=shared
+
+## Before Trying to run the chat app
+
+Remember to run npm install on the repo once you have cloned it to your local
+
+```bash
+npm install
+```
+
+## To start a local development server, run:
+
+```bash
+ng serve --open
+```
+
 ## Development server
 
 To start a local development server, run:
 
 ```bash
-ng serve
+ng serve --open
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
@@ -36,23 +56,24 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## To Install Angular
+Make sure you have downloaded node first, I'm on windows so I downloaded and installed node for windows, once installed, open node.js command prompt (You Can search for it via the windows start bar)
+Then in the node command prompt type in the command below:
 
 ```bash
-ng e2e
+npm install -g @angular/cli
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+For a specific version of angular you can type in the command below just replace [version] with the version of angular you want to install globally
+
+```bash
+npm install -g @angular/cli@[version]
+```
+
+example:
+```bash
+npm install -g @angular/cli@19.1.5
+```
 
 ## Additional Resources
 
